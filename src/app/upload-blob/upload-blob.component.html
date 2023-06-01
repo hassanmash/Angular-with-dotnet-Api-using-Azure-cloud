@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="card-header">
+        <h6>Upload Blob Component</h6>
+    </div>
+    <div class="card-body"> 
+        <p>Select the container to upload blob into:
+            <select [(ngModel)]="containerName">
+                <option value="" hidden disabled></option>
+                <option *ngFor="let item of containerList">{{item}}</option>
+            </select>
+        </p>
+        <p>Select a file to Upload:
+            <input type="file" class="form-control" (change)="onChange($event)">
+            <!-- <input type="file" class="form-control" #fileInput [multiple]="false"> -->
+        </p>
+        <br>
+        <button class="btn btn-outline-success" (click)="uploadBlob()">Upload</button>
+    </div>
+</div>

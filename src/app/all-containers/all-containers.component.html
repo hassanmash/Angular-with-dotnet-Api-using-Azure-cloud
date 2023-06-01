@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-header">
+        <h6>All Containers Component</h6>
+    </div>
+    <div class="card-body"> 
+        <button class="btn btn-primary" (click)="getContainer()">Get all containers</button>
+        <hr>
+        <h3>Here is list of containers:</h3>
+        <ul>
+            <li *ngFor="let item of containerList">{{item}}</li>
+        </ul>
+        <hr>
+    </div>
+</div>

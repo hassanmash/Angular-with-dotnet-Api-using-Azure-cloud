@@ -1,0 +1,23 @@
+<div class="card">
+    <div class="card-header">
+        <h6>Download Blob Component</h6>
+    </div>
+    <div class="card-body"> 
+        <p>Choose the container
+            <select [(ngModel)]="containerName" (change)="onChange()">
+                <option value="" hidden disabled></option>
+                <option *ngFor="let item of containerList">{{item}}</option>
+            </select>
+        </p>
+        <br>
+        <p>
+            Blobs in container '{{containerName}}':
+        </p>
+        <ul>
+            <li *ngFor="let item of BlobList">
+                <p> {{item}} 
+                <a (click)="downloadLink(item)">Download</a> </p>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card-header">
+        <h6>Delete Blob Component</h6>
+    </div>
+    <div class="card-body"> 
+        <p>Choose the container:
+            <select [(ngModel)]="containerName" (change)="onChangeContainer()">
+                <option value="" hidden disabled></option>
+                <option *ngFor="let item of containerList">{{item}}</option>
+            </select>
+        </p>
+        <br>
+        <p>Choose the blob:
+            <select [(ngModel)]="blobName">
+                <option value="" hidden disabled></option>
+                <option *ngFor="let item of blobList">{{item}}</option>
+            </select>
+        </p>
+        <button class="btn btn-danger" (click)="onClickDelete()">Delete Blob</button>
+    </div>
+</div>

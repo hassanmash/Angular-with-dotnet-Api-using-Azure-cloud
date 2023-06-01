@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-header">
+        <h6>All Blobs Component</h6>
+    </div>
+    <div class="card-body"> 
+        <p>Select a container: 
+            <select [(ngModel)]="containerName" (click)="getContainer()" (change)="getBlobs()">
+                <option value="" hidden disabled></option>
+                <option *ngFor="let item of containerList">{{item}}</option>
+            </select>
+        </p>
+        <hr>
+        <h3>
+            The blobs in container '{{containerName}}' is/are:
+        </h3>
+        <ul>
+            <li *ngFor="let item of BlobList">{{item}}</li>
+        </ul>
+    </div>
+</div>
